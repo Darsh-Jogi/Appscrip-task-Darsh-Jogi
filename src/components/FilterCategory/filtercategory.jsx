@@ -23,15 +23,10 @@ export const FilterCategory = ({ showfilter, setShowfilter, switchdesign, setSwi
         dispatch(GetProductData({ category: ProductState.activeCategory }))
     }, [ProductState.activeCategory])
 
-    // console.log("this is the", CategoryState)
-    // console.log("this is product state", ProductState)
-
     const UpdateActiveCategoryState = (item) => {
         dispatch(SetActiveCategory({ activecategory: item }))
         setCategorydropdown(false)
     }
-
-    console.log("this is switch desgin", switchdesign)
 
     return (
         <div className={`FilterCategory-container`}>
@@ -47,9 +42,9 @@ export const FilterCategory = ({ showfilter, setShowfilter, switchdesign, setSwi
             </div>
             <div className="FilterCategory-container__category--seclection">
                 <div className="FilterCategory-container__category--desginSwitch">
-                    <label class="switch" onChange={() => setSwitchdesign(!switchdesign)}>
-                        <input type="checkbox" checked={switchdesign} />
-                        <span class="slider"></span>
+                    <label className="switch">
+                        <input type="checkbox" checked={switchdesign} onChange={() => setSwitchdesign(!switchdesign)}/>
+                        <span className="slider"></span>
                     </label>
                     <div className="FilterCategory-container__category--switch">
                         <p>Switch Design</p>
@@ -57,7 +52,7 @@ export const FilterCategory = ({ showfilter, setShowfilter, switchdesign, setSwi
                 </div>
                 <div className="FilterCategory-container__productcategory">
                     <div className="FilterCategory-container__productcategory--activecategory" onClick={() => setCategorydropdown(!categorydropdown)}>
-                        {CategoryState.isLoading ? <span class="loader"></span> : <p>{ProductState.activeCategory}</p>}
+                        {CategoryState.isLoading ? <span className="loader"></span> : <p>{ProductState.activeCategory}</p>}
                         <img src={dropdowntrigger} alt="show-dropdown" loading="lazy" />
                     </div>
                     {categorydropdown ? <div className="FilterCategory-container__productcategory--categorydropdown">

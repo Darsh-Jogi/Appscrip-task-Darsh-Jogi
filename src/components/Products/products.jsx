@@ -10,8 +10,6 @@ import pagination_next from "../../assets/images/pagination-next.png"
 import { Add_Wishlist_Item, Remove_Wishlist_Item } from "../../redux/slices/wishlistSlice"
 
 export const Products = ({ showFilter, switchdesign }) => {
-    const dispatch = useDispatch()
-    const CategoryState = useSelector((state) => state.CategoryReducer)
     const ProductState = useSelector((state) => state.ProductReducer)
     const [CurrentPagination, setCurrentPagination] = useState(9)
 
@@ -39,7 +37,7 @@ export const Products = ({ showFilter, switchdesign }) => {
             </div>
 
             {ProductState.isLoading || !ProductState.data ? <div className="product-container__loading">
-                <span class="product-container__loader"></span>
+                <span className="product-container__loader"></span>
                 <h1>Loading...</h1>
             </div> : null}
 
