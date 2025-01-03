@@ -1,0 +1,20 @@
+.productsection-container__filter-products {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+@media only screen and (240px <= width <=767px) {
+    .productsection-container__filter-products {
+        width: 100%;
+        display: flex;
+        position: relative;
+        gap: 0px !important;
+    }
+
+    .product-container.loader-unactive.filter-active {
+        width: 100% !important;
+        white-space: nowrap;
+        transition: width 0.5s ease-in-out;
+    }
+}

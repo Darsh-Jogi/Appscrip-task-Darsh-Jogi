@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", serif;
+    font-style: normal;
+}
+.main-app-layout{
+    padding: 0px 5%;
+}
+
+@media only screen and (640px <=width <=767px) {
+    .main-app-layout{
+        padding: 0px 3%;
+    }
+}
+
+@media only screen and (240px <=width <=640px) {
+    .main-app-layout{
+        padding: 0px 2%;
+    }
+}
