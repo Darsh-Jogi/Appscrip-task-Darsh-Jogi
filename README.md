@@ -1,4 +1,4 @@
-# E-Commerce Assignment
+# E-Commerce Landing Page
 
 ## Description
 
